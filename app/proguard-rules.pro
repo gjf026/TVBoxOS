@@ -207,3 +207,4 @@
 -keep class com.google.gson.**{*;}
 # Cronet
 -keep class com.google.net.cronet.**{*;}
+-keep class org.chromium.net.**{*;}
