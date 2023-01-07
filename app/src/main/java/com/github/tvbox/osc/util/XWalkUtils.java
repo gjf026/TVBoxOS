@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.widget.Toast;
 
-import org.xwalk.core.XWalkInitializer;
+//import org.xwalk.core.XWalkInitializer;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -58,36 +58,36 @@ public class XWalkUtils {
             state.ignore();
             return;
         }
-        if (xWalkInitializer == null) {
-            xWalkInitializer = new XWalkInitializer(new XWalkInitializer.XWalkInitListener() {
-                @Override
-                public void onXWalkInitStarted() {
+    //    if (xWalkInitializer == null) {
+    //        xWalkInitializer = new XWalkInitializer(new XWalkInitializer.XWalkInitListener() {
+    //           @Override
+    //            public void onXWalkInitStarted() {
 
-                }
+   //             }
 
-                @Override
-                public void onXWalkInitCancelled() {
+   //             @Override
+   //             public void onXWalkInitCancelled() {
 
-                }
+   //             }
 
-                @Override
-                public void onXWalkInitFailed() {
-                    if (state != null)
-                        state.fail();
-                }
+  //              @Override
+   //             public void onXWalkInitFailed() {
+  //                  if (state != null)
+  //                      state.fail();
+   //             }
 
-                @Override
-                public void onXWalkInitCompleted() {
-                    if (state != null)
-                        state.success();
-                }
-            }, context);
-        }
-        if (xWalkInitializer.isXWalkReady()) {
-            state.success();
-        } else {
-            xWalkInitializer.initAsync();
-        }
+   //             @Override
+  //              public void onXWalkInitCompleted() {
+   //                 if (state != null)
+   //                     state.success();
+   //             }
+  //          }, context);
+  //      }
+ //       if (xWalkInitializer.isXWalkReady()) {
+  //          state.success();
+ //       } else {
+//            xWalkInitializer.initAsync();
+//        }
     }
 
     private static boolean checkEmbedded(Activity activity) {
