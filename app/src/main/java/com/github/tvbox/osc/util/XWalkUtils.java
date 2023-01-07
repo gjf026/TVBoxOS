@@ -18,7 +18,7 @@ import java.util.zip.ZipFile;
 
 public class XWalkUtils {
 
-    private static XWalkInitializer xWalkInitializer = null;
+ //   private static XWalkInitializer xWalkInitializer = null;
 
     public interface XWalkState {
         void success();
